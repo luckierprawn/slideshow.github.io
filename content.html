@@ -44,7 +44,13 @@
         <!-- Photo Grid -->
         <div class="w3-row-padding" id="myGrid" style="margin-bottom:128px">
             <div class="w3-third">
-                <img src="/images/image 1.jpeg" style="width:100%">
+                <img src="/images/image 1.jpeg" style="width:100%;cursor:zoom-in" onclick="document.getElementById('img1').style.display='block'">
+                <div id="img1" class="w3-modal w3-animate-opacity" onclick="this.style.display='none'">
+                    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright w3-round">&times;</span> 
+                    <div class="w3-modal-content w3-animate-zoom">
+                        <img src="images/image 1.jpeg" style="width:100%" />
+                    </div>
+                </div>
             </div>
 
             <div class="w3-third">
