@@ -38,21 +38,21 @@
 
     <!-- !PAGE CONTENT! -->
     <div class="w3-content" style="max-width:1500px">
-
+        <button onclick="message()" class="w3-button w3-grey w3-hover-blue w3-round" style="font-weight:bold;font-size:small">Click Here</button>
         <!-- Header -->
         <br />
         <!-- Photo Grid -->
         <div class="w3-row-padding" id="myGrid" style="margin-bottom:128px">
             <div class="w3-third">
-                <img src="/images/image 1.jpeg" style="width:90%">
+                <img src="/images/image 1.jpeg" style="width:100%">
             </div>
 
             <div class="w3-third">
-                <img src="/images/image 2.jpeg" style="width:90%">
+                <img src="/images/image 2.jpeg" style="width:100%">
             </div>
 
             <div class="w3-third">
-                <img src="/images/holding hands.jpeg" style="width:94.3%">
+                <img src="/images/holding hands.jpeg" style="width:100%">
             </div>
         </div>
 
@@ -78,6 +78,10 @@
 
         function w3_close() {
             document.getElementById("mySidebar").style.display = "none";
+        }
+
+        function message() {
+            alert("Testing");
         }
     </script>
 
