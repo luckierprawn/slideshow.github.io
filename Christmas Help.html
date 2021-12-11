@@ -1,0 +1,106 @@
+﻿Skip to content
+Pull requests
+Issues
+Marketplace
+Explore
+@luckierprawn
+luckierprawn /
+yogstream.github.io
+Public
+
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+
+    Settings
+
+yogstream.github.io/index.html
+@luckierprawn
+luckierprawn Upload
+Latest commit b23b50b on 1 Dec 2020
+History
+1 contributor
+62 lines (55 sloc) 3.06 KB
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jingle Jam 2020</title>
+    <link rel="icon" href="icon 2.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="twitch-embed"></div>
+
+    <div class="w3-container">
+        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-hover-blue w3-round" style="font-weight:bold;font-size:18px;font-family:Mountains of Christmas;background-color:#bb0700;color:#00B32C">Click here to see the schedule</button>
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-card w3-animate-zoom">
+                <header class="w3-container w3-black" style="background-color:black">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-round w3-display-topright" id="close">&times;</span>
+                    <h2 style="text-align:center;text-decoration:underline;font-weight:bold;color:whitesmoke;font-family:Mountains of Christmas;font-size:xx-large">Jingle Jam Stream Schedule</h2>
+                </header>
+                <div class="w3-container" style="background-color:black">
+                    <img src="https://schedule.yogscast.com" alt="Yogscast Stream Schedule" style="height:100%; width:100%" />
+                    <a href="https://www.twitch.tv/yogscast"><p style="font-size:16px;text-decoration:underline;color:Highlight;">Watch on Twitch</p></a>
+                </div>
+            </div>
+        </div>
+        <button onclick="chat()" class="w3-button w3-hover-blue w3-round" style="font-weight:bold;font-size:18px;font-family:Mountains of Christmas;background-color:#bb0700;color:#00B32C">Open Chat</button>
+        <button onclick="login()" class="w3-button w3-hover-blue w3-round" style="font-weight:bold;font-size:18px;font-family:Mountains of Christmas;background-color:#bb0700;color:#00B32C">Login to Twitch</button>
+    </div>
+    <br />
+
+    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+    <script type="text/javascript">
+        new Twitch.Player("twitch-embed", {
+            channel: "yogscast",
+            width: "100%",
+            height: "890px"
+        });
+    </script>
+
+    <script>
+            var modal = document.getElementById('id01');
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+
+            function chat() {
+                var chatWindow = window.open("https://www.twitch.tv/popout/yogscast/chat?popout=true", '_blank', 'width=475,height=650');
+            }
+
+            function login() {
+                alert("Close window once logged in");
+                var chatWindow = window.open("http://www.twitch.tv/login", '_blank', 'width=475,height=650');
+            }
+    </script>
+
+</body>
+</html>
+
+    © 2021 GitHub, Inc.
+
+    Terms
+    Privacy
+    Security
+    Status
+    Docs
+    Contact GitHub
+    Pricing
+    API
+    Training
+    Blog
+    About
+
+Loading complete
