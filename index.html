@@ -385,7 +385,7 @@
             <button class="w3-button w3-grey w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 
             <br />
-            <button onclick="message()" class="w3-button w3-pink w3-hover-blue w3-round" style="font-weight:bold;font-size:small">>>Click Me<<</button>
+            <button id="message" class="w3-button w3-pink w3-hover-blue w3-round" style="font-weight:bold;font-size:small">>>Click Me<<</button>
             <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-pink w3-round" style="font-weight:bold;font-size:small">>>Essays<<</button>
             <div id="id01" class="w3-modal" onclick="this.style.display='none'">
                 <div class="w3-modal-content w3-animate-bottom" style="max-width:10%;background-color:transparent">
@@ -449,9 +449,34 @@
             modal.style.display = "none"
         }
 
-        function message() {
-            alert("Hey baby. I created this website so that you could see pictures of us when you miss me. I want you to know that I love you so so so much and I think the complete world of you. When you talk about getting married, moving in together and having kids it makes me really happy and I love picturing it. I'm so lucky to have you and I never want to lose you sweetie. I love spending time with you and I hate having to go home, especially Friday as I never wanted it to end and I want more days like that with you. I love you so so so much that I can't use words to describe it ❤❤😍😍😘😘🥰. I'm always here for you and I'm never ever going to leave you ❤❤😍😘")
+        function rGen() {
+            let rNum = (Math.floor(Math.random() * 4) + 1)
+
+            if (rNum == 1) {
+                var text = "Hey baby! I really really love you! I honestly do! You're all I want and will ever want! I created this website for you so that you can look at pictures of us and read the essays that I've written for you so if you ever miss me a lot then you can look back at some of our memories together. You’re the best thing that’s ever happened to me and I want you forever and ever! I really can’t wait for our future together! Just picturing it makes me happy! I love you loads and loads and always will sweetie! ❤️❤️❤️❤️❤️❤️❤️"
+            }
+
+            if (rNum == 2) {
+                var text = "Heya baby cakes! You know you’re amazing right? You’re the most amazing person I’ve ever met, and I sometimes still can’t believe that we’re together! I know I took ages telling you how I felt about you. If there's one thing I wish I could go back and change, it would be to tell you how I felt about you sooner! You’re so perfect, kind, caring and supportive! I really want to move in together and decorate our house. I want to marry you and make sure that the day we get married is the best day of your life baby! I want to have kids with you too! I want to have everything with you! I sometimes picture us making dinner together and making sure that our kids are doing their homework. I really really love you sweetie! 😍😍❤️❤️❤️❤️❤️❤️"
+            }
+
+            if (rNum == 3) {
+                var text = "Hey sweetie! You know you’re really beautiful right? You’re so gorgeous!!! I never thought someone as beautiful as you would want to date an ugly mug like me. Can I just say that you’re really hot baby, like you’re really sexy! You turn me on a lot! I know I’m a bit obsessed with your belly and fat. But I find it really hot! I love pleasuring you! I love hearing you moan! I love sucking you off and eating you out! I really love your dick! I love having it in my mouth! I know I’m a creep/perv, but I really do love you a lot! I’ll always love you! No matter what happens I’ll always be here for you! I’ll always want to support you and make you happy! I love you loads my precious! 😍😍😍❤️❤️❤️❤️❤️❤️❤️❤️❤️ "
+            }
+
+            if (rNum == 4) {
+                var text = "What’s up buttercup? Baby I love travelling with you! I’ve loved going to Brighton, Liverpool, Plymouth, and Cardiff with you! I can’t wait for more journeys with you! I love the fact we get to share a bed together too! I can’t wait to travel abroad with you! I want to Japan, Disney land/world and America with you! I love having holidays in Brighton with you! I love exploring the lanes with you and going swimming! I really want to go travelling with you to more places! I really love it, it’s like we’re running away together! I have so much fun when we’re on holiday together and I love the fact that I get to spend loads of time with you! Thank you for being so so amazing and for taking me on my first holiday. I really really love you baby!!! ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️ "
+            }
+
+            alert(text);
         }
+
+        let message = document.getElementById('message');
+        message.addEventListener('click', rGen);
+
+        //function message() {
+        //    alert("Hey baby. I created this website so that you could see pictures of us when you miss me. I want you to know that I love you so so so much and I think the complete world of you. When you talk about getting married, moving in together and having kids it makes me really happy and I love picturing it. I'm so lucky to have you and I never want to lose you sweetie. I love spending time with you and I hate having to go home, especially Friday as I never wanted it to end and I want more days like that with you. I love you so so so much that I can't use words to describe it ❤❤😍😍😘😘🥰. I'm always here for you and I'm never ever going to leave you ❤❤😍😘")
+        //}
     </script>
 
 </body>
