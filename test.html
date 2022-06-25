@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Test Page</title>
+    <link rel="stylesheet" href="Style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body, h1 {
+            font-family: "Montserrat", sans-serif
+        }
+
+        img {
+            margin-bottom: -7px
+        }
+
+        .w3-row-padding img {
+            margin-bottom: 12px
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-black w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+            <i class="fa fa-remove"></i>
+        </a>
+        <div class="w3-bar-block w3-center">
+            <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">About</a>
+            <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Photos</a>
+            <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Shop</a>
+            <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Contact</a>
+        </div>
+    </nav>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-content" <!--style="max-width:1500px"-->>
+
+        <!-- Header -->
+        <br />
+        <div class="w3-row-padding" id="myGrid" >
+            <div class="w3-third">
+                <img src="/images/image 1.jpeg" style="width:100%;cursor:zoom-in" onclick="document.getElementById('img1').style.display='block'">
+                <div id="img1" class="w3-modal w3-animate-opacity" onclick="this.style.display='none'">
+                    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright w3-round">&times;</span>
+                    <div class="w3-modal-content w3-animate-zoom">
+                        <img src="images/image 1.jpeg" style="width:100%" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <img src="/images/image 2.jpeg" style="width:100%">
+            </div>
+
+            <div class="w3-third">
+                <img src="/images/holding hands.jpeg" style="width:100%">
+            </div>
+        </div>
+        <!-- Photo Grid -->
+        <!--<div class="w3-content w3-display-container">
+        <img class="myslides w3-display-topmiddle" src="images/image 1.jpeg" style="width:25%" />
+        <img class="myslides w3-display-topmiddle" src="images/image 2.jpeg" style="width:25%" />
+        <img class="myslides w3-display-topmiddle" src="images/holding hands.jpeg" style="width:25%" />
+        <img class="myslides w3-display-topmiddle" src="images/holding hands 2.jpeg" style="width:25%" />
+
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("myslides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>-->
+        <!-- End Page Content -->
+    </div>
+
+    <script>
+        // Toggle grid padding
+        function myFunction() {
+            var x = document.getElementById("myGrid");
+            if (x.className === "w3-row") {
+                x.className = "w3-row-padding";
+            } else {
+                x.className = x.className.replace("w3-row-padding", "w3-row");
+            }
+        }
+
+        // Open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.width = "100%";
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
